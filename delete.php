@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 
         // Verify the current password
         if (password_verify($password, $stored_hash)) {
-            // Password matches, proceed to update with the new password
+            // Password matches, proceed to delete
             $sql = "DELETE FROM users WHERE id = $user_id";
             try {
                 mysqli_query($conn, $sql);
